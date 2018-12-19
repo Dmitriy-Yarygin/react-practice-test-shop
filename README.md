@@ -12,6 +12,22 @@ Additional tasks:
 	1. Currency.
 	2. Persist products in cart.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*********************************************************************************************************/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -1,0 +1,2 @@
+export const CLEAR_PRODUCTS = 'CLEAR_PRODUCTS'
+export const ADD_PRODUCTS = 'ADD_PRODUCTS'
