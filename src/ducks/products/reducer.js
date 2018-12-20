@@ -4,6 +4,7 @@ import {
   SAVE_END
 } from './actionTypes'
 
+// const INIT = { products: [] }
 const INIT = { products: [], start: 0 }
 
 export default function productsReducer (state = INIT, action) {
