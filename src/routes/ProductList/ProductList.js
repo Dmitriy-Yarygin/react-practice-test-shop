@@ -1,46 +1,55 @@
 import React, { Component } from 'react'
 import './ProductList.css'
-import { connect } from 'react-redux'
-import { allProducts } from '../../selectors'
-import {
-  addProducts,
-  clearStore,
-  fetchProducts
-} from '../../ducks/products/actions'
 import ProductCard from './ProductCard'
 import Button from '@material-ui/core/Button'
 
-class ProductList extends Component {
-  state = { products: [], page: 1, limit: 3 }
+const productsQantity = 15
+
+export default class ProductList extends Component {
+  state = { products: [], start: 0, limit: 3 }
 
   componentDidMount () {
-    const data = { page: this.state.page, limit: this.state.limit }
-    this.props.load(data)
+    const start = this.props.start
+    const limit = this.props.limit
+    if (start && limit) {
+      this.setState({ start, limit })
+    } else {
+      this.props.fetchProducts(this.state.start, this.state.limit)
+    }
   }
 
   showMore = () => {
-    const data = { page: this.state.page + 1, limit: this.state.limit }
-    this.props.load(data)
-    this.setState({ page: data.page })
+    const start = this.state.start + this.state.limit
+    this.props.fetchProducts(start, this.state.limit)
+    this.setState({ start })
+    // this.props.saveStart(5555);
   }
 
   componentWillUnmount () {
-    this.props.clsStore()
+    // this.props.clearStore()
+    this.props.saveStart(this.state.start)
+    this.props.saveLimit(this.state.limit)
   }
 
   render () {
-    const products = this.props.items;
-    const isLast = (products.length>(15-this.state.limit));
+    const products = this.props.items
+    console.log('ProductList render    ', products)
+    const isLast = products.length > productsQantity - this.state.limit
     return (
       <>
         <ul className='products'>
-          {products.map(item => {
-            // const productPage = `/user/:${item.id}`
-            return <ProductCard key={item.id} item={item}/>
-          })}
+          {products.map(item => (
+            <ProductCard key={item.id} item={item} />
+          ))}
         </ul>
         <div>
-          <Button variant='contained' color='primary' disabled={isLast} fullWidth onClick={this.showMore}>
+          <Button
+            variant='contained'
+            color='primary'
+            disabled={isLast}
+            fullWidth
+            onClick={this.showMore}
+          >
             Show more ...
           </Button>
         </div>
@@ -48,17 +57,3 @@ class ProductList extends Component {
     )
   }
 }
-
-const mapStateToProps = state => ({
-  items: allProducts(state)
-})
-const mapDispatchToProps = dispatch => ({
-  addToStore: data => dispatch(addProducts(data)),
-  clsStore: data => dispatch(clearStore(data)),
-
-  load: data => dispatch(fetchProducts(data))
-})
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ProductList)

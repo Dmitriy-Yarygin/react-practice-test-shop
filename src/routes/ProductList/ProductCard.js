@@ -12,16 +12,16 @@ import Typography from '@material-ui/core/Typography'
 const styles = theme => ({
   card: {
     maxWidth: 345,
-    margin: theme.spacing.unit*3
+    margin: theme.spacing.unit * 3
   },
   media: {
     height: 140
   }
-  });
-  
+})
+
 function ProductCard (props) {
   const { classes, item } = props
-  const { name, description, cost } = item  
+  const { name, description, cost } = item
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -51,17 +51,3 @@ ProductCard.propTypes = {
 }
 
 export default withStyles(styles)(ProductCard)
-
-/*
-
-                <Link key={id} className='products-item' to={productPage}>
-                  <div>
-                    <img src='https://via.placeholder.com/120' alt='avatar' />
-                  </div>
-                  <div>
-                    <b className='products-item-name'>{name}</b>
-                    <span className='products-item-cost'>{cost}</span>
-                  </div>
-                </Link>
-
-*/

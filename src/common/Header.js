@@ -110,7 +110,7 @@ function Header (props) {
           >
             “Test Shop” Project
           </Typography>
-          <NavLink to='/' className='header-link' activeClassName='active'>
+          <NavLink to='/404' className='header-link' activeClassName='active'>
             Home
           </NavLink>
           <div className={classes.grow} />
