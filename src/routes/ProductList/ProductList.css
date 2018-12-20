@@ -1,0 +1,24 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /*
+  .products>div {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    align-items: center;
+    border: 1px solid cyan;
+  }
+  .products-item-name {
+    font-size: 2em;
+  }
+  .products-item-cost {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    color: brown;
+  }
+  
+*/  

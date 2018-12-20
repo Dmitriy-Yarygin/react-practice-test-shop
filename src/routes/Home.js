@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import { Link } from 'react-router-dom'
-import ProductList from './Products/ProductList'
+import ProductList from './ProductList/ProductList'
 
 
 class Home extends Component {
@@ -8,7 +8,7 @@ class Home extends Component {
   render () {
 
     return (
-      <div>
+      <div className="home">
         <ProductList  />
       </div>
     )
