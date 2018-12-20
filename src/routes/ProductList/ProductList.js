@@ -3,17 +3,16 @@ import './ProductList.css'
 import ProductCard from './ProductCard'
 import Button from '@material-ui/core/Button'
 
-const productsQantity = 15
-
 export default class ProductList extends Component {
-  state = { products: [], start: 0, limit: 3 }
+  state = { products: [], start: 0, limit: 6 }
 
   componentDidMount () {
     const start = this.props.start
-    const limit = this.props.limit
-    if (start && limit) {
-      this.setState({ start, limit })
-    } else {
+    if (start) {
+      this.setState({ start })
+    }
+
+    if (this.props.items.length === 0) {
       this.props.fetchProducts(this.state.start, this.state.limit)
     }
   }
@@ -22,19 +21,15 @@ export default class ProductList extends Component {
     const start = this.state.start + this.state.limit
     this.props.fetchProducts(start, this.state.limit)
     this.setState({ start })
-    // this.props.saveStart(5555);
   }
 
   componentWillUnmount () {
-    // this.props.clearStore()
     this.props.saveStart(this.state.start)
-    this.props.saveLimit(this.state.limit)
   }
 
   render () {
     const products = this.props.items
-    console.log('ProductList render    ', products)
-    const isLast = products.length > productsQantity - this.state.limit
+    const isLast = products.length >= this.props.end
     return (
       <>
         <ul className='products'>

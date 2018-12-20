@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ProductList from './ProductList/container/ProductList'
+import ProductList from './ProductList/ProductListContainer'
 
 class Home extends Component {
   render () {

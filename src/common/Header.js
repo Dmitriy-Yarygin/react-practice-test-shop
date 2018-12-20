@@ -1,33 +1,12 @@
-// import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
-
-// class Header extends Component {
-
-//   render () {
-//     return (
-//       <div className='header'>
-//       <img src='https://via.placeholder.com/30' alt='avatar' />
-//         <NavLink to='/' activeClassName='active'>
-//           Home
-//         </NavLink>
-//       </div>
-//     )
-//   }
-// }
-
-// export default Header
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
-import InputBase from '@material-ui/core/InputBase'
 import { fade } from '@material-ui/core/styles/colorManipulator'
 import { withStyles } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu'
-import SearchIcon from '@material-ui/icons/Search'
 
 const styles = theme => ({
   root: {
@@ -110,22 +89,7 @@ function Header (props) {
           >
             “Test Shop” Project
           </Typography>
-          <NavLink to='/404' className='header-link' activeClassName='active'>
-            Home
-          </NavLink>
           <div className={classes.grow} />
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder='Search…'
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput
-              }}
-            />
-          </div>
         </Toolbar>
       </AppBar>
     </div>
@@ -137,3 +101,9 @@ Header.propTypes = {
 }
 
 export default withStyles(styles)(Header)
+/*
+import { NavLink } from 'react-router-dom'
+<NavLink to='/404' className='header-link' activeClassName='active'>
+            Home
+          </NavLink>
+*/

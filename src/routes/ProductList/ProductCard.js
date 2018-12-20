@@ -21,7 +21,7 @@ const styles = theme => ({
 
 function ProductCard (props) {
   const { classes, item } = props
-  const { name, description, cost } = item
+  const { name, cost } = item
   return (
     <Card className={classes.card}>
       <CardActionArea>
