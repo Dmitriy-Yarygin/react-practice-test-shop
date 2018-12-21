@@ -10,7 +10,7 @@ class Router extends Component {
     return (
       <Switch>
         <Route path='/' component={Home} exact />
-          <Route path='/product/:userId' component={Product} exact/>
+        <Route path='/product/:productId' component={Product} exact/>
         <Route component={NotFound} />
       </Switch>
     )
