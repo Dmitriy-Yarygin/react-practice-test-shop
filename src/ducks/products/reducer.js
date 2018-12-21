@@ -1,11 +1,6 @@
-import {
-  ADD_PRODUCTS,
-  SAVE_START,
-  SAVE_END
-} from './actionTypes'
+import { ADD_PRODUCTS, SAVE_START, SAVE_END, SAVE_ERROR } from './actionTypes'
 
-// const INIT = { products: [] }
-const INIT = { products: [], start: 0 }
+const INIT = { products: [], start: 0, error: null }
 
 export default function productsReducer (state = INIT, action) {
   const { type, payload } = action
@@ -22,6 +17,9 @@ export default function productsReducer (state = INIT, action) {
 
     case SAVE_END:
       return { ...state, end: payload }
+
+    case SAVE_ERROR:
+      return { ...state, error: payload }
 
     default:
       return state

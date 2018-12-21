@@ -29,7 +29,6 @@ function Header(props) {
             variant="h6"
             color="inherit"
             noWrap
-            containerElement={<Link to="/404" />}
           >
             “Test Shop” Project
           </Typography>

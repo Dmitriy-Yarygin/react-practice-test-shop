@@ -8,35 +8,40 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+import {Link} from 'react-router-dom'
 
 const styles = theme => ({
   card: {
-    maxWidth: 345,
+    maxWidth: 240,
     margin: theme.spacing.unit //* 3
   },
   media: {
-    height: 140
+    height: 50
   }
 })
 
 function ProductCard (props) {
   const { classes, item } = props
-  const { name, cost } = item
+  const { id, name, cost } = item
+  const path = `/product/${id}`
   return (
     <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image='http://yachtrus.ru/arfa-fad-dea3/uploads/2015/01/%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%8110.jpg'
-          title='Yaht'
-        />
-        <CardContent>
-          <Typography gutterBottom variant='h5' component='h2'>
-            {name}
-          </Typography>
-          <Typography component='p'>Product cost: {cost}</Typography>
-        </CardContent>
-      </CardActionArea>
+      <Link to={path} >
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image='http://yachtrus.ru/arfa-fad-dea3/uploads/2015/01/%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%8110.jpg'
+            title='Yaht'
+          />
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='h2'>
+              {name}
+            </Typography>
+            <Typography component='p'>Product cost: {cost}</Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
+
       <CardActions>
         <Button size='large' color='primary'>
           Buy
