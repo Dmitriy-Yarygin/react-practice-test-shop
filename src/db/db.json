@@ -43,18 +43,6 @@
       "cost": 20
     },
     {
-      "id": 8,
-      "name": "Hh",
-      "description": "A letter is a grapheme (written character) in an alphabetic system of writing. It is a visual representation of the smallest unit of spoken sound. Letters broadly correspond to phonemes in the spoken form of the language, although there is rarely a consistent, exact correspondence between letters and phonemes.",
-      "cost": 20
-    },
-    {
-      "id": 9,
-      "name": "Gg",
-      "description": "A letter is a grapheme (written character) in an alphabetic system of writing. It is a visual representation of the smallest unit of spoken sound. Letters broadly correspond to phonemes in the spoken form of the language, although there is rarely a consistent, exact correspondence between letters and phonemes.",
-      "cost": 20
-    },
-    {
       "id": 10,
       "name": "Hh",
       "description": "A letter is a grapheme (written character) in an alphabetic system of writing. It is a visual representation of the smallest unit of spoken sound. Letters broadly correspond to phonemes in the spoken form of the language, although there is rarely a consistent, exact correspondence between letters and phonemes.",

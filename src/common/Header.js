@@ -20,7 +20,7 @@ function Header(props) {
             color="inherit"
             aria-label="Open drawer"
           >
-            <Link to="/404" className="header-link">
+            <Link to="/" className="header-link">
               <MenuIcon />
             </Link>
           </IconButton>

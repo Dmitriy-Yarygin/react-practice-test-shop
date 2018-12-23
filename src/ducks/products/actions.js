@@ -1,40 +1,58 @@
-import {
-  ADD_PRODUCTS,
-  SAVE_START,
-  SAVE_END,
-  SAVE_ERROR,
-} from './actionTypes'
+import * as actionTypes from "./actionTypes";
 
-export const addProducts = ({ productsArray }) => ({
-  type: ADD_PRODUCTS,
-  payload: { productsArray }
-})
+export const saveId = id => ({
+  type: actionTypes.SAVE_ID,
+  payload: id
+});
+
+export const getProductById = id => dispatch =>
+  fetch(`http://localhost:3005/products?id=${id}`)
+    .then(response => response.json())
+    .then(productItem => {
+      dispatch(addProductItem(productItem[0]));
+      dispatch(saveError(null));
+    })
+    .catch(error => {
+      dispatch(saveError(error.message));
+    });
+    
+export const addProductItem = productItem => ({
+  type: actionTypes.ADD_PRODUCT_ITEM,
+  payload: productItem
+});
 
 export const fetchProducts = (start, limit) => dispatch =>
   fetch(`http://localhost:3005/products?_start=${start}&_limit=${limit}`)
     .then(response => response.json())
     .then(productsArray => {
       if (productsArray.length < limit) {
-        dispatch(saveEnd(start + productsArray.length))
+        dispatch(saveEnd(start + productsArray.length));
+      } else {
+        dispatch(saveStart(start + limit));
       }
-      dispatch(addProducts({ productsArray }))
-      dispatch(saveError(''))
+      dispatch(addProducts({ productsArray }));
+      dispatch(saveError(null));
     })
     .catch(error => {
-      dispatch(saveError(error.message))
-    })
+      dispatch(saveError(error.message));
+    });
+
+export const addProducts = ({ productsArray }) => ({
+  type: actionTypes.ADD_PRODUCTS,
+  payload: { productsArray }
+});
 
 export const saveStart = start => ({
-  type: SAVE_START,
+  type: actionTypes.SAVE_START,
   payload: start
-})
+});
 
 export const saveEnd = end => ({
-  type: SAVE_END,
+  type: actionTypes.SAVE_END,
   payload: end
-})
+});
 
 export const saveError = error => ({
-  type: SAVE_ERROR,
+  type: actionTypes.SAVE_ERROR,
   payload: error
-})
+});
