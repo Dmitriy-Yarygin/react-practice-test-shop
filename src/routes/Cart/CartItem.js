@@ -16,6 +16,9 @@ const styles = theme => ({
     maxWidth: 250,
     margin: theme.spacing.unit //* 3
   },
+  title: {
+    height: 90,
+  },
   media: {
     height: 200
   }
@@ -23,23 +26,17 @@ const styles = theme => ({
 
 class ProductCard extends Component {
   delete = () => {
-    console.log(`Pressed delete`)
-    console.log(this.props.item.id)
-
     this.props.delProductFromCart(this.props.item.id)
   }
 
   handleChange = e => {
-    const count = e.target.value;    
-    if ( !isNaN(parseFloat(count)) && isFinite(count) && count > 0 && count < 10) {
+    const count = e.target.value
+    if (count > 0 && count < 10) {
       this.props.editQantityInCart(this.props.item.id, count)
     }
   }
 
   render () {
-    console.log(`CartItem render`)
-    console.log(this.props)
-
     const { classes, item } = this.props
     const { id, count, name, url, cost } = item
     const path = `/product/${id}`
@@ -49,8 +46,8 @@ class ProductCard extends Component {
           <CardActionArea>
             <i>Id={id}</i>
             <CardMedia className={classes.media} image={url} title='Yaht' />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
+            <CardContent className={classes.title}>
+              <Typography variant='h5' component='h2'>
                 {name}
               </Typography>
             </CardContent>
@@ -59,7 +56,6 @@ class ProductCard extends Component {
 
         <CardActions>
           <Typography component='p'>Price: {cost.toLocaleString()}</Typography>
-
           <TextField
             id='standard-number'
             label='Quantity to buy:'

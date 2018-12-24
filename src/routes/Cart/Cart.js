@@ -3,8 +3,6 @@ import CartItem from './CartItem'
 import './Cart.css'
 
 class Cart extends Component {
-  state = { count: 0 }
-
   render () {
     const totalSum = this.props.cartItems.reduce(
       (sum, item) => sum + item.count * item.cost,

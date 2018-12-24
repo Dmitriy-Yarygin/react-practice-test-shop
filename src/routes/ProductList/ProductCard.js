@@ -23,7 +23,6 @@ const styles = theme => ({
 class ProductCard extends Component {
 
   buy = () => {
-    console.log(`Pressed buy`)
     this.props.addProductToCart(this.props.item)
   }
 
