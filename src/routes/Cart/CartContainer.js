@@ -1,19 +1,14 @@
 import { connect } from 'react-redux'
-import * as actions from '../../ducks/products/actions'
 import Cart from './Cart'
+import { delProductFromCart, editQantityInCart } from '../../ducks/cart/actions'
 
 const mapStateToProps = state => ({
-  items: state.products.products,
-  start: state.products.start,
-  end: state.products.end,
-  error: state.products.error
+    cartItems: state.cart,
 })
 
 const mapDispatchToProps = dispatch => ({
-  addProducts: data => dispatch(actions.addProducts(data)),
-  fetchProducts: (page, limit) => dispatch(actions.fetchProducts(page, limit)),
-  saveStart: start => dispatch(actions.saveStart(start)),
-  saveError: flag => dispatch(actions.saveError(flag)),
+  delProductFromCart: (id) => dispatch(delProductFromCart(id)),
+  editQantityInCart: (id, count) => dispatch(editQantityInCart(id, count)),
 })
 
 export default connect(

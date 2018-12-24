@@ -13,7 +13,7 @@ export default class ProductList extends Component {
   }
 
   showMore = () => {
-    this.props.fetchProducts(this.props.start, this.state.limit)
+    this.props.fetchProducts(this.props.start, this.state.limit);
   }
 
   render () {
@@ -23,7 +23,7 @@ export default class ProductList extends Component {
       <>
         <ul className='products'>
           {products.map(item => (
-            <ProductCard key={item.id} item={item} />
+            <ProductCard key={item.id} item={item} addProductToCart={this.props.addProductToCart}/>
           ))}
         </ul>
         <div>

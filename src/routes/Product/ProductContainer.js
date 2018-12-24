@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
 import Product from './Product'
 import * as actions from '../../ducks/products/actions'
-import {choosenProduct} from '../../selectors' //selectors
+import * as cartActions from '../../ducks/cart/actions'
+import {choosenProduct} from '../../selectors' 
 
 const mapStateToProps = state => ({
   item: choosenProduct(state),
@@ -11,6 +12,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   saveId: (id) => dispatch( actions.saveId(id) ),
   getProductById: (id) => dispatch( actions.getProductById(id) ),
+
+  addProductToCart: (id) => dispatch( cartActions.addProductToCart(id) ),
 })
 
 export default connect(

@@ -48,7 +48,13 @@ class Product extends Component {
     this.props.history.goBack()
   }
 
+  buy = () => {
+    console.log(`Pressed buy`)
+    this.props.addProductToCart( this.props.item );
+  }
+
   render () {
+    console.log(`Product render`)
     const id = Number(this.props.match.params.productId)
     if (!this.props.item || (this.props.item.id && this.props.item.id !== id)) {
       return <ProductNotFound id={id} />
@@ -95,6 +101,7 @@ class Product extends Component {
               Return
             </Button>
             <Button
+              onClick={this.buy}
               variant='outlined'
               color='primary'
               className={classes.button}

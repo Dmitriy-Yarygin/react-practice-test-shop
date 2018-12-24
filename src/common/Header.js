@@ -8,7 +8,7 @@ import { withStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 import styles from "./HeaderStyle"
-import CartBage from "./CartBage"
+import CartBage from "./CartBageContainer"
 
 function Header(props) {
   const { classes } = props;
