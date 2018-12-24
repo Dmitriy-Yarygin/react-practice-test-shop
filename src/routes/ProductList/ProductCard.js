@@ -15,6 +15,9 @@ const styles = theme => ({
     maxWidth: 250,
     margin: theme.spacing.unit //* 3
   },
+  title: {
+    height: 80,
+  },
   media: {
     height: 200
   }
@@ -36,7 +39,7 @@ class ProductCard extends Component {
           <CardActionArea>
             <CardMedia className={classes.media} image={url} title='Yaht' />
             <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
+              <Typography className={classes.title} variant='h5' component='h2'>
                 {name}
               </Typography>
               <Typography component='p'>
