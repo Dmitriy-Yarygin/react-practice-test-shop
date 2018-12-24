@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography'
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * 2
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -31,7 +31,6 @@ const styles = theme => ({
 
 class Product extends Component {
   componentWillMount () {
-    console.log('componentWillMount')
     const id = Number(this.props.match.params.productId)
     this.props.saveId(id)
     if (
@@ -61,16 +60,13 @@ class Product extends Component {
       length,
       location,
       material,
-      description
+      description,
+      cost
     } = this.props.item
-    let cost = this.props.item.cost
-    if (!isNaN(parseFloat(cost)) && isFinite(cost)) {
-      cost = cost.toLocaleString()
-    }
     const { classes } = this.props
     return (
       <div className={classes.root}>
-        <Typography variant="h2" component="h2" gutterBottom>
+        <Typography variant='h2' component='h2' gutterBottom>
           {name}
         </Typography>
         <Grid container spacing={24}>
@@ -88,11 +84,9 @@ class Product extends Component {
               <b>Hull Material: </b> {material}
             </Typography>
             <Typography variant='body1' gutterBottom>
-              <b>Current Price: </b> {cost}
+              <b>Current Price: </b> {cost.toLocaleString() || cost}
             </Typography>
-            <Typography component="p">
-              {description}
-            </Typography>
+            <Typography component='p'>{description}</Typography>
             <Button
               onClick={this.goBack}
               variant='outlined'

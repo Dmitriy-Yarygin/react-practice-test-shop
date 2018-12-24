@@ -8,6 +8,7 @@ import { withStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 import styles from "./HeaderStyle"
+import CartBage from "./CartBage"
 
 function Header(props) {
   const { classes } = props;
@@ -33,6 +34,7 @@ function Header(props) {
             “Test Shop” Project
           </Typography>
           <div className={classes.grow} />
+          <CartBage />
         </Toolbar>
       </AppBar>
     </div>

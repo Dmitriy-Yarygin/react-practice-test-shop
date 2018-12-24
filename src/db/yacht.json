@@ -9,7 +9,7 @@
       "location": "Italy",
       "material": "Composite",
       "description": "I-SEA' is a high performance cruiser that flaunts hull #09 of the successful SW 100 mini-series designed by Farr Yacht Design (Naval Architecture) and Nauta Design (General concept, interior and exterior design). Having had only one owner and a single Captain, I-Sea has been impeccably maintained and has recently benefited from significant technical investments, including the upgrading of the rigging from Rod to Carbon EC6+, a topside repaint and a new set of cruising sail.",
-      "cost": 3900000
+      "cost": 1200
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "location": "Netherlands",
       "material": "ComAluminumposite",
       "description": "The Company offers the details of this vessel in good faith but cannot guarantee or warrant the accuracy of this information nor warrant the condition of the vessel. A buyer should instruct his agents, or his surveyors, to investigate such details as the buyer desires validated. This vessel is offered subject to prior sale, price change, or withdrawal without notice. ",
-      "cost": "Call for Price"
+      "cost": 1000
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "location": "France",
       "material": "Other",
       "description": "This one-of-a-kind yacht that you are about to discover is the perfect synergy between long range ocean cruising & easy day sailing. This low impact Yacht capable to cruise the globe; As well with an America’s Cup inspired rig, with a patented mast sail, “Ocean Wings” for a 50% increase in speed compare to a normalsail.",
-      "cost": "Call for Price"
+      "cost": 1100
     },
     {
       "id": 4,
@@ -53,7 +53,7 @@
       "location": "Netherlands",
       "material": "StFibreglass/GRPeel",
       "description": "This is a brand new Demo yacht and has been launched and rigged in the end of February 2018 for the first time. The yacht has a very beautiful and well finished oak interior and is equipped with a lot of interesting options, like;  A Vinylester hull.  A teak deck, teak on the superstructure, teak on the cockpit floor, teak on the cockpit seats and teak on the bathing platform.  A Carbon bowsprit, 3 electric winches, an electric folding bathing platform covered with teak, 2 electric toilets, a retractable bow truster, a Raymarine set (Raymarine i70 Speed/Depht/Wind, Evolution autopilot, VHF, Raymarine eS97 9 Hybrid-Touch Multifunctional Display chart plotter, AIS650 Transponder), cockpit cushions, cockpit lighting, a Fushion sound system, an inverter, a fridge, a freezer, a 2.20 metre low-draft keel and much more options !",
-      "cost": 374000
+      "cost": 1300
     },
     {
       "id": 6,
@@ -64,7 +64,7 @@
       "location": "Marmaris, Turkey",
       "material": "Steel",
       "description": "ll About U is a custom motor sailor sloop rigged currently under construction in ADA Yachts, Bodrum, Turkey. Built to a very high standard. This high-volume superyacht was design with one full beam Master cabin, one VIP full beam cabin and 4 large double guest cabins. The salon, dining area and wheelhouse are design in one open large space with a 360 degrees panoramic view. The 65 square meter flybridge layout was designed to entertain large amount of guests with modular furniture. Transom door can be converted to a huge 26 square meter swim platform. Large and well-designed galley, built to service large number of guests. High standard sailing package including Lwamar captive winches for safe and easy handling of the large sail plan.",
-      "cost": 19500000
+      "cost": 1400
     }
   ]  
 }

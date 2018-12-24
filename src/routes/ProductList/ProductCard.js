@@ -22,10 +22,7 @@ const styles = theme => ({
 
 function ProductCard(props) {
   const { classes, item } = props;
-  let { id, name, url, cost } = item;
-  if (!isNaN(parseFloat(cost)) && isFinite(cost)) {
-    cost = cost.toLocaleString();
-  }
+  const { id, name, url, cost } = item;
   const path = `/product/${id}`;
   return (
     <Card className={classes.card}>
@@ -36,7 +33,7 @@ function ProductCard(props) {
             <Typography gutterBottom variant="h5" component="h2">
               {name}
             </Typography>
-            <Typography component="p">Current Price: {cost}</Typography>
+            <Typography component="p">Current Price: {cost.toLocaleString() || cost}</Typography>
           </CardContent>
         </CardActionArea>
       </Link>

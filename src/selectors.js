@@ -15,7 +15,6 @@ export const choosenProduct = createSelector(
       const filteredProduct = products.products.filter(
         item => item.id === products.id
       );
-      console.log(filteredProduct);
 
       if (filteredProduct.length === 1) {
         const product = filteredProduct[0];
