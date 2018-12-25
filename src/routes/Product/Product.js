@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Product.css'
 import ProductNotFound from '../../common/ProductNotFound'
 
 import PropTypes from 'prop-types'

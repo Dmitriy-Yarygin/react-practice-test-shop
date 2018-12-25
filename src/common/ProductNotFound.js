@@ -1,13 +1,28 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
-const ProductNotFound = (props) => {
+const ProductNotFound = props => {
   return (
     <div>
-      <h4>Sorry. Product {props.id} not found </h4>
-      <Link to="/">Return home</Link>
+      <br/>
+      <Typography
+        variant="h5"
+        component="h2"
+        align="center"
+        color="error"
+        paragraph
+      >
+        Sorry. Product with <i>id={props.id}</i> not found
+      </Typography>
+      <Link to="/">
+        <Button variant="outlined" fullWidth color="primary">
+          Return to the main page
+        </Button>
+      </Link>
     </div>
   );
-}
- 
+};
+
 export default ProductNotFound;
