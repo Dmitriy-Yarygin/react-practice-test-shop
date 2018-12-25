@@ -55,7 +55,7 @@ exports[`renders correctly 1`] = `
             </a>
           </span>
           <span
-            className="MuiTouchRipple-root-143"
+            className="MuiTouchRipple-root-142"
           />
         </button>
         <h6
@@ -66,7 +66,11 @@ exports[`renders correctly 1`] = `
         <div
           className="Header-grow-2"
         />
-        <div>
+        <a
+          className="cartLink"
+          href="/cart"
+          onClick={[Function]}
+        >
           <b>
              Total sum: 
             0
@@ -91,40 +95,35 @@ exports[`renders correctly 1`] = `
             <span
               className="MuiIconButton-label-54"
             >
-              <a
-                href="/cart"
-                onClick={[Function]}
+              <span
+                className="MuiBadge-root-102"
               >
-                <span
-                  className="MuiBadge-root-103"
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
-                    />
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                  </svg>
-                  <span
-                    className="MuiBadge-badge-104 MuiBadge-colorSecondary-106"
-                  >
-                    0
-                  </span>
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+                <span
+                  className="MuiBadge-badge-103 MuiBadge-colorSecondary-105"
+                >
+                  0
                 </span>
-              </a>
+              </span>
             </span>
             <span
-              className="MuiTouchRipple-root-143"
+              className="MuiTouchRipple-root-142"
             />
           </button>
-        </div>
+        </a>
       </div>
     </header>
   </div>
@@ -137,7 +136,7 @@ exports[`renders correctly 1`] = `
     />
     <div>
       <button
-        className="MuiButtonBase-root-55 MuiButton-root-117 MuiButton-contained-128 MuiButton-containedPrimary-129 MuiButton-raised-131 MuiButton-raisedPrimary-132 MuiButton-fullWidth-142"
+        className="MuiButtonBase-root-55 MuiButton-root-116 MuiButton-contained-127 MuiButton-containedPrimary-128 MuiButton-raised-130 MuiButton-raisedPrimary-131 MuiButton-fullWidth-141"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -155,12 +154,12 @@ exports[`renders correctly 1`] = `
         type="button"
       >
         <span
-          className="MuiButton-label-118"
+          className="MuiButton-label-117"
         >
           Show more ...
         </span>
         <span
-          className="MuiTouchRipple-root-143"
+          className="MuiTouchRipple-root-142"
         />
       </button>
     </div>
