@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MySnackbar /> renders correctly 1`] = `
+<div>
+  <h2>
+     Just test of test 
+  </h2>
+  <i>
+     
+    error
+     
+  </i>
+  <p
+    className="msg"
+  >
+    my test message
+  </p>
+</div>
+`;

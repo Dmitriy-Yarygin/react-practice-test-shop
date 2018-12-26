@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.7.0",
     "@material-ui/icons": "^3.0.1",
+    "chai": "^4.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
@@ -20,7 +21,7 @@
     "start": "react-scripts start",
     "start-server": "json-server --watch src/db/yacht.json --port 3005",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

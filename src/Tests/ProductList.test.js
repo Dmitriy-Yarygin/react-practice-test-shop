@@ -5,10 +5,10 @@ import { products } from "../db/yacht.json";
 
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-configure({ adapter: new Adapter() });
 
 import { shallow, mount, render } from "enzyme";
-
+configure({ adapter: new Adapter() });
+/*
 describe("<ProductList />", () => {
   // it("allows us to set props", () => {
   //   const wrapper = mount(
@@ -35,3 +35,4 @@ describe("<ProductList />", () => {
     // expect(wrapper.find(ProductCard)).to.have.lengthOf(3);
   });
 });
+*/

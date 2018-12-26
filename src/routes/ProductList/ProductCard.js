@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   card: {
+    minWidth: 200,
     maxWidth: 250,
     margin: theme.spacing.unit //* 3
   },
