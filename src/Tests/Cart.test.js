@@ -7,9 +7,10 @@ describe('<Cart />', () => {
   let component
 
   it('Empty Cart has Total sum ', () => {
-    component = shallow(<Cart cartItems={[]} />)
+    component = shallow(<Cart cartItems={[]} cartProductsTotalCount={0} />)
+    console.log(component.find('h3').debug())
     expect(component.find('ul').children().length).toBe(0)
-    expect(component.find('h3').text()).toBe(' Total sum:  ')
+    expect(component.find('h3').text()).toBe('Total sum: 0')
   })
 
   it('Cart with 2 products ', () => {

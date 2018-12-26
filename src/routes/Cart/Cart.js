@@ -17,7 +17,7 @@ class Cart extends Component {
             />
           ))}
         </ul>
-        <h3> Total sum: {this.props.cartProductsTotalCount} </h3>
+        <h3>Total sum: {this.props.cartProductsTotalCount}</h3>
       </>
     );
   }
