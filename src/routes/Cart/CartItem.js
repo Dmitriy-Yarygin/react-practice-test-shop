@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField'
 import CardActions from '@material-ui/core/CardActions'
 import Button from '@material-ui/core/Button'
+import { MAX_PRODUCT_COUNT } from '../../common/Constants'
 
 const styles = theme => ({
   card: {
@@ -18,7 +19,7 @@ const styles = theme => ({
     margin: theme.spacing.unit //* 3
   },
   title: {
-    height: 90,
+    height: 90
   },
   media: {
     height: 200
@@ -31,8 +32,8 @@ class ProductCard extends Component {
   }
 
   handleChange = e => {
-    const count = e.target.value
-    if (count > 0 && count < 10) {
+    const count = Number(e.target.value)
+    if (count > 0 && count < MAX_PRODUCT_COUNT) {
       this.props.editQantityInCart(this.props.item.id, count)
     }
   }

@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes'
+import {MAX_PRODUCT_COUNT} from '../../common/Constants'
 
 const INIT = []
 
@@ -13,7 +14,7 @@ export default function productsReducer (state = INIT, action) {
       let countChanged = false
       let newState = state.map(item => {
         if (item.id === payload.id) {
-          if (item.count < 9) {
+          if (item.count < MAX_PRODUCT_COUNT) {
             item.count += 1
           }
           countChanged = true
@@ -28,7 +29,7 @@ export default function productsReducer (state = INIT, action) {
     case actionTypes.EDIT_PRODUCT:
       return state.map(item => {
         if (item.id === payload.id) {
-          item.count = payload.count
+          item.count = Number(payload.count)
         }
         return item
       })

@@ -16,7 +16,6 @@ describe('<Cart />', () => {
     component = shallow(
       <Cart cartItems={[{ ...products[0] }, { ...products[3] }]} />
     )
-    console.log(component.debug())
     expect(component.find('ul').children().length).toBe(2)
   })
 })

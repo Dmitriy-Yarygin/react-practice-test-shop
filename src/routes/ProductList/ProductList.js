@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import './ProductList.css'
 import ProductCard from './ProductCard'
 import Button from '@material-ui/core/Button'
+import { PRODUCTS_LIMIT } from '../../common/Constants'
 
 export default class ProductList extends Component {
-  state = { limit: 3 }
+  state = { limit: PRODUCTS_LIMIT }
 
   componentDidMount () {
     if (this.props.items.length === 0) {
@@ -18,14 +19,20 @@ export default class ProductList extends Component {
 
   render () {
     const products = this.props.items
-    const isLast = products.length >= this.props.end 
+    const isLast = products.length === this.props.end 
+
     return (
       <>
         <ul className='products'>
           {products.map(item => (
-            <ProductCard key={item.id} item={item} addProductToCart={this.props.addProductToCart}/>
+            <ProductCard 
+              key={item.id}
+              item={item}
+              addProductToCart={this.props.addProductToCart}
+            />
           ))}
         </ul>
+
         <div>
           <Button
             variant='contained'
