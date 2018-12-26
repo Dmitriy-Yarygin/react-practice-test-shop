@@ -21,7 +21,7 @@
     "start": "react-scripts start",
     "start-server": "json-server --watch src/db/yacht.json --port 3005",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

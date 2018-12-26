@@ -3,7 +3,7 @@ import React from 'react'
 import App from '../App'
 import renderer from 'react-test-renderer'
 
-it('renders correctly', () => {
+it('App renders correctly', () => {
   const tree = renderer
     .create(<App />)
     .toJSON()
