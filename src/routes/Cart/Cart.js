@@ -4,10 +4,6 @@ import "./Cart.css";
 
 class Cart extends Component {
   render() {
-    const totalSum = this.props.cartItems.reduce(
-      (sum, item) => sum + item.count * item.cost,
-      0
-    );
     return (
       <>
         <h2> Cart </h2>
@@ -21,7 +17,7 @@ class Cart extends Component {
             />
           ))}
         </ul>
-        <h3> Total sum: {totalSum} </h3>
+        <h3> Total sum: {this.props.cartProductsTotalCount} </h3>
       </>
     );
   }
