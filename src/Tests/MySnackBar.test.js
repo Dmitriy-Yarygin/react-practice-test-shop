@@ -1,13 +1,7 @@
 import React from 'react'
 import { products } from '../db/yacht.json'
 import renderer from 'react-test-renderer'
-import { configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-import { BrowserRouter } from 'react-router-dom'
 import { shallow, mount, render } from 'enzyme'
-// import { expect } from 'chai';
-
-configure({ adapter: new Adapter() })
 
 /// ///////////////////////////////////////////////////////////////
 // import MySnackbar from '../common/MySnackbar'
@@ -17,6 +11,8 @@ const MySnackbar = props => {
     <div>
       <h2> Just test of test </h2>
       <i> { props.variant } </i>
+      <p className='msg'>{props.message}</p>
+      <p className='msg'>{props.message}</p>
       <p className='msg'>{props.message}</p>
     </div>
   )
@@ -43,6 +39,10 @@ describe('<MySnackbar />', () => {
     // console.log(component.props().message)
     // console.log('111111111111111111111111111111111111111111111111')
     expect(component.props().message).toBe('my test message')
+  })
+
+  it('3. MySnackbar has 3 .msg elements', () => {
+    expect(component.find('div.msg')).to.have.lengthOf(3);
   })
 
   it('renders correctly', () => {

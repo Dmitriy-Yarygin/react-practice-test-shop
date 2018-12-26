@@ -15,5 +15,15 @@ exports[`<MySnackbar /> renders correctly 1`] = `
   >
     my test message
   </p>
+  <p
+    className="msg"
+  >
+    my test message
+  </p>
+  <p
+    className="msg"
+  >
+    my test message
+  </p>
 </div>
 `;

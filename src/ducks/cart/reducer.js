@@ -13,7 +13,9 @@ export default function productsReducer (state = INIT, action) {
       let countChanged = false
       let newState = state.map(item => {
         if (item.id === payload.id) {
-          item.count += 1
+          if (item.count < 9) {
+            item.count += 1
+          }
           countChanged = true
         }
         return item
