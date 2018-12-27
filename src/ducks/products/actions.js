@@ -50,7 +50,7 @@ export const saveStart = start => ({
 
 export const saveEnd = end => ({
   type: actionTypes.SAVE_END,
-  payload: end
+  payload: Number(end)
 })
 
 export const saveError = error => ({
