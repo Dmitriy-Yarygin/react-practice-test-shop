@@ -7,7 +7,7 @@ class Cart extends Component {
     return (
       <>
         <h2> Cart </h2>
-        <ul className="cartList">
+        <ul className="cart-list">
           {this.props.cartItems.map(item => (
             <CartItem
               key={item.id}
@@ -17,7 +17,7 @@ class Cart extends Component {
             />
           ))}
         </ul>
-        <h3>Total sum: {this.props.cartProductsTotalCount}</h3>
+        <h3 className="cart-totalSum">Total sum: {this.props.cartProductsTotalCount}</h3>
       </>
     );
   }

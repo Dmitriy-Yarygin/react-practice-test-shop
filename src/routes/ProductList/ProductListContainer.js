@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchProducts: (page, limit) => dispatch(fetchProducts(page, limit)),
+  fetchProducts: (start, limit) => dispatch(fetchProducts(start, limit)),
 
   addProductToCart: (product) => dispatch(addProductToCart(product)),
 })

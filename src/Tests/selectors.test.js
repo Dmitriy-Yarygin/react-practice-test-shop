@@ -17,11 +17,11 @@ describe('Testing selectors', () => {
   })
 
   test('choosenProduct for id=11111 return null ', () => {
-    expect(choosenProduct({ products: { id: 11111, products } })).toBe(null)
+    expect(choosenProduct({ products: { id: 11111, products } })).toBeNull()
   })
 
   test('choosenProduct for id=11111 without products array return null ', () => {
-    expect(choosenProduct({ products: { id: 11111 } })).toBe(null)
+    expect(choosenProduct({ products: { id: 11111 } })).toBeNull()
   })
 
   test('choosenProduct for id=1 to be "Southern Wind SW100 DS" ', () => {
@@ -31,7 +31,7 @@ describe('Testing selectors', () => {
   })
 
   test('choosenProduct for empty id return null ', () => {
-    expect(choosenProduct({ products })).toBe(null)
+    expect(choosenProduct({ products })).toBeNull()
   })
 
   test('choosenProduct for id=4 and empty products and filled product to be "Jongert 3200P" ', () => {

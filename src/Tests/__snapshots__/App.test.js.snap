@@ -136,7 +136,7 @@ exports[`App renders correctly 1`] = `
     />
     <div>
       <button
-        className="MuiButtonBase-root-55 MuiButton-root-116 MuiButton-contained-127 MuiButton-containedPrimary-128 MuiButton-raised-130 MuiButton-raisedPrimary-131 MuiButton-fullWidth-141"
+        className="MuiButtonBase-root-55 MuiButton-root-116 MuiButton-contained-127 MuiButton-containedPrimary-128 MuiButton-raised-130 MuiButton-raisedPrimary-131 MuiButton-fullWidth-141 showMoreBtn"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}

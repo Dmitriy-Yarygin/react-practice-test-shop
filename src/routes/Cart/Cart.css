@@ -1,4 +1,4 @@
-.cartList {
-    display: flex;
-    flex-wrap: nowrap;
+.cart-list {
+  display: flex;
+  flex-wrap: wrap;
 }

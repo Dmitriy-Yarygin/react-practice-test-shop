@@ -33,7 +33,7 @@ class ProductCard extends Component {
 
   handleChange = e => {
     const count = Number(e.target.value)
-    if (count > 0 && count < MAX_PRODUCT_COUNT) {
+    if (count > 0 && count <= MAX_PRODUCT_COUNT) {
       this.props.editQantityInCart(this.props.item.id, count)
     }
   }

@@ -54,7 +54,7 @@ class ProductCard extends Component {
           <Button size='large' color='primary'>
             <Link to={path}>Detailes</Link>
           </Button>
-          <Button onClick={this.buy} size='large' color='primary'>
+          <Button className='buyBtn' onClick={this.buy} size='large' color='primary'>
             Buy
           </Button>
         </CardActions>

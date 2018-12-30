@@ -35,6 +35,7 @@ export default class ProductList extends Component {
 
         <div>
           <Button
+            className='showMoreBtn'
             variant='contained'
             color='primary'
             disabled={isLast}
