@@ -2,6 +2,7 @@ import { createSelector } from 'reselect'
 
 const productSelector = state => state.products
 const productsInCartSelector = state => state.cart
+const currencyRateSelector = state => state.currency.rate
 
 export const choosenProduct = createSelector(
   [productSelector],
@@ -34,8 +35,8 @@ export const cartProductsCount = createSelector(
 )
 
 export const cartProductsTotalCount = createSelector(
-  [productsInCartSelector],
-  productsInCart => {
-    return productsInCart.reduce((sum, item) => sum + item.count * item.cost, 0)
+  [productsInCartSelector, currencyRateSelector],
+  (productsInCart, rate) => {
+    return Math.round(100 * productsInCart.reduce((sum, item) => sum + item.count * item.cost / rate, 0)) / 100
   }
 )

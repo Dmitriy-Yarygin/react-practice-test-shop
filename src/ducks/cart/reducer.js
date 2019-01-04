@@ -1,40 +1,40 @@
-import * as actionTypes from './actionTypes'
-import {MAX_PRODUCT_COUNT} from '../../common/Constants'
+import * as actionTypes from "./actionTypes";
+import { MAX_PRODUCT_COUNT } from "../../common/Constants";
 
-const INIT = []
+const INIT = [];
 
-export default function productsReducer (state = INIT, action) {
-  const { type, payload } = action
+export default function productsReducer(state = INIT, action) {
+  const { type, payload } = action;
 
   switch (type) {
     case actionTypes.DELETE_PRODUCT:
-      return state.filter(item => item.id !== payload)
+      return state.filter(item => item.id !== payload);
 
     case actionTypes.ADD_PRODUCT:
-      let countChanged = false
+      let countChanged = false;
       let newState = state.map(item => {
         if (item.id === payload.id) {
           if (item.count < MAX_PRODUCT_COUNT) {
-            item.count += 1
+            item.count += 1;
           }
-          countChanged = true
+          countChanged = true;
         }
-        return item
-      })
+        return item;
+      });
       if (!countChanged) {
-        newState.push({ ...payload, count: 1 })
+        newState.push({ ...payload, count: 1 });
       }
-      return newState
+      return newState;
 
     case actionTypes.EDIT_PRODUCT:
       return state.map(item => {
         if (item.id === payload.id) {
-          item.count = Number(payload.count)
+          item.count = Number(payload.count);
         }
-        return item
-      })
+        return item;
+      });
 
     default:
-      return state
+      return state;
   }
 }

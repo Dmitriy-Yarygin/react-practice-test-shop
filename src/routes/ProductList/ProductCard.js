@@ -31,8 +31,9 @@ class ProductCard extends Component {
   }
 
   render() { 
-    const { classes, item } = this.props
-    const { id, name, url, cost } = item
+    const { classes, item, currency } = this.props
+    const { id, name, url } = item
+    const cost = Math.round(100*(item.cost / currency.rate))/100;    
     const path = `/product/${id}`
     return (
       <Card className={classes.card}>
@@ -44,7 +45,7 @@ class ProductCard extends Component {
                 {name}
               </Typography>
               <Typography component='p'>
-                Current Price: {cost.toLocaleString() || cost}
+                Current Price: {cost.toLocaleString()} {currency.designation}
               </Typography>
             </CardContent>
           </CardActionArea>

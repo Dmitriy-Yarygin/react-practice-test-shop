@@ -63,9 +63,9 @@ class Product extends Component {
       length,
       location,
       material,
-      description,
-      cost
+      description
     } = this.props.item;
+    const cost = Math.round(100*(this.props.item.cost / this.props.currency.rate))/100;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
@@ -87,7 +87,7 @@ class Product extends Component {
               <b>Hull Material: </b> {material}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              <b>Current Price: </b> {cost.toLocaleString()}
+              <b>Current Price: </b> {cost.toLocaleString()} {this.props.currency.designation}
             </Typography>
             <Typography component="p">{description}</Typography>
             <Button

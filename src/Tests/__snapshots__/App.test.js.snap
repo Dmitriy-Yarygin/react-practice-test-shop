@@ -6,14 +6,14 @@ exports[`App renders correctly 1`] = `
     className="Header-root-1"
   >
     <header
-      className="MuiPaper-root-18 MuiPaper-elevation4-24 MuiAppBar-root-9 MuiAppBar-positionStatic-13 MuiAppBar-colorPrimary-16"
+      className="MuiPaper-root-14 MuiPaper-elevation4-20 MuiAppBar-root-5 MuiAppBar-positionStatic-9 MuiAppBar-colorPrimary-12"
     >
       <div
-        className="MuiToolbar-root-45 MuiToolbar-regular-47 MuiToolbar-gutters-46"
+        className="MuiToolbar-root-41 MuiToolbar-regular-43 MuiToolbar-gutters-42"
       >
         <button
           aria-label="Open drawer"
-          className="MuiButtonBase-root-55 MuiIconButton-root-49 MuiIconButton-colorInherit-50 Header-menuButton-3"
+          className="MuiButtonBase-root-51 MuiIconButton-root-45 Header-menuButton-3"
           disabled={false}
           onBlur={[Function]}
           onContextMenu={[Function]}
@@ -30,7 +30,7 @@ exports[`App renders correctly 1`] = `
           type="button"
         >
           <span
-            className="MuiIconButton-label-54"
+            className="MuiIconButton-label-50"
           >
             <a
               className="header-link"
@@ -39,7 +39,7 @@ exports[`App renders correctly 1`] = `
             >
               <svg
                 aria-hidden="true"
-                className="MuiSvgIcon-root-58"
+                className="MuiSvgIcon-root-54"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -55,79 +55,146 @@ exports[`App renders correctly 1`] = `
             </a>
           </span>
           <span
-            className="MuiTouchRipple-root-142"
+            className="MuiTouchRipple-root-179"
           />
         </button>
         <h6
-          className="MuiTypography-root-67 MuiTypography-h6-84 MuiTypography-colorInherit-96 MuiTypography-noWrap-93 Header-title-4"
+          className="MuiTypography-root-63 MuiTypography-h6-80 MuiTypography-noWrap-89 Header-title-4"
         >
           “Test Shop” Project
         </h6>
         <div
           className="Header-grow-2"
         />
-        <a
-          className="cartLink"
-          href="/cart"
-          onClick={[Function]}
-        >
-          <b>
-             Total sum: 
-            0
-          </b>
-          <button
-            className="MuiButtonBase-root-55 MuiIconButton-root-49 MuiIconButton-colorInherit-50"
-            disabled={false}
-            onBlur={[Function]}
-            onContextMenu={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseLeave={[Function]}
-            onMouseUp={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            tabIndex="0"
-            type="button"
+        <div>
+          <span
+            className="CartBage-totalSum-98"
           >
-            <span
-              className="MuiIconButton-label-54"
+            Total sum: 
+            0
+          </span>
+          <div
+            className="MuiInputBase-root-122 MuiInput-root-109 MuiInput-underline-113"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiNativeSelect-root-102 CurrencySelect-root-99"
+            >
+              <select
+                className="MuiNativeSelect-select-103 CurrencySelect-select-100 MuiInputBase-input-132 MuiInput-input-117"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                value="UAH"
+              >
+                <option
+                  style={
+                    Object {
+                      "backgroundColor": "inherit",
+                      "color": "black",
+                    }
+                  }
+                  value="UAH"
+                >
+                  ₴
+                </option>
+                <option
+                  style={
+                    Object {
+                      "backgroundColor": "inherit",
+                      "color": "black",
+                    }
+                  }
+                  value="USD"
+                >
+                  $
+                </option>
+                <option
+                  style={
+                    Object {
+                      "backgroundColor": "inherit",
+                      "color": "black",
+                    }
+                  }
+                  value="EUR"
+                >
+                  €
+                </option>
+              </select>
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-54 MuiNativeSelect-icon-108 CurrencySelect-icon-101"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <a
+            className="cartLink"
+            href="/cart"
+            onClick={[Function]}
+          >
+            <button
+              className="MuiButtonBase-root-51 MuiIconButton-root-45"
+              disabled={false}
+              onBlur={[Function]}
+              onContextMenu={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex="0"
+              type="button"
             >
               <span
-                className="MuiBadge-root-102"
+                className="MuiIconButton-label-50"
               >
-                <svg
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
-                  />
-                  <path
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  />
-                </svg>
                 <span
-                  className="MuiBadge-badge-103 MuiBadge-colorSecondary-105"
+                  className="MuiBadge-root-139"
                 >
-                  0
+                  <svg
+                    height="24"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <span
+                    className="MuiBadge-badge-140 MuiBadge-colorSecondary-142"
+                  >
+                    0
+                  </span>
                 </span>
               </span>
-            </span>
-            <span
-              className="MuiTouchRipple-root-142"
-            />
-          </button>
-        </a>
+              <span
+                className="MuiTouchRipple-root-179"
+              />
+            </button>
+          </a>
+        </div>
       </div>
     </header>
   </div>
-  <div />
+  <div
+    className="snackBar"
+  />
   <div
     className="home"
   >
@@ -136,7 +203,7 @@ exports[`App renders correctly 1`] = `
     />
     <div>
       <button
-        className="MuiButtonBase-root-55 MuiButton-root-116 MuiButton-contained-127 MuiButton-containedPrimary-128 MuiButton-raised-130 MuiButton-raisedPrimary-131 MuiButton-fullWidth-141 showMoreBtn"
+        className="MuiButtonBase-root-51 MuiButton-root-153 MuiButton-contained-164 MuiButton-containedPrimary-165 MuiButton-raised-167 MuiButton-raisedPrimary-168 MuiButton-fullWidth-178 showMoreBtn"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -154,12 +221,12 @@ exports[`App renders correctly 1`] = `
         type="button"
       >
         <span
-          className="MuiButton-label-117"
+          className="MuiButton-label-154"
         >
           Show more ...
         </span>
         <span
-          className="MuiTouchRipple-root-142"
+          className="MuiTouchRipple-root-179"
         />
       </button>
     </div>

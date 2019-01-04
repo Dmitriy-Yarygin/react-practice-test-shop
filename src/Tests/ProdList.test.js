@@ -4,11 +4,13 @@ import ProductList from "../routes/ProductList/ProductList";
 import { products } from "../db/yacht.json";
 import { BrowserRouter } from "react-router-dom";
 import { PRODUCTS_LIMIT } from "../common/Constants";
+import { INIT_CURRENCY } from "../common/Constants";
 
 let component;
 const mockAddProductToCart = jest.fn(({ name }) => name);
 const mockFetchProducts = jest.fn();
 let myProps = {
+  currency: INIT_CURRENCY,
   items: products,
   start: 3,
   end: 6,

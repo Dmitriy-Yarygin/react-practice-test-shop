@@ -7,7 +7,8 @@ const mapStateToProps = state => ({
   items: state.products.products,
   start: state.products.start,
   end: state.products.end,
-  error: state.products.error
+  error: state.products.error,
+  currency: state.currency
 })
 
 const mapDispatchToProps = dispatch => ({

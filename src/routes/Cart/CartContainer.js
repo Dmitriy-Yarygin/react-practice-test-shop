@@ -5,7 +5,8 @@ import { cartProductsTotalCount} from '../../selectors'
 
 const mapStateToProps = state => ({
     cartItems: state.cart,
-    cartProductsTotalCount: cartProductsTotalCount(state)
+    cartProductsTotalCount: cartProductsTotalCount(state),
+    currency: state.currency
 })
 
 const mapDispatchToProps = dispatch => ({

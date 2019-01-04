@@ -6,7 +6,8 @@ import {choosenProduct} from '../../selectors'
 
 const mapStateToProps = state => ({
   item: choosenProduct(state),
-  items: state.products.products,   // items help to check ability for selector to choose product without fetch
+  items: state.products.products,   // items help to check ability for selector to choose product without fetch,
+  currency: state.currency
 })
 
 const mapDispatchToProps = dispatch => ({

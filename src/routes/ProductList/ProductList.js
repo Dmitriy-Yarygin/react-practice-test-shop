@@ -28,6 +28,7 @@ export default class ProductList extends Component {
             <ProductCard 
               key={item.id}
               item={item}
+              currency= {this.props.currency}
               addProductToCart={this.props.addProductToCart}
             />
           ))}

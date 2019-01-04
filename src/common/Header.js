@@ -7,8 +7,8 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
-import styles from "./HeaderStyle"
-import CartBage from "./CartBageContainer"
+import styles from "./HeaderStyle";
+import CartBage from "./CartBageContainer";
 
 function Header(props) {
   const { classes } = props;
@@ -18,7 +18,6 @@ function Header(props) {
         <Toolbar>
           <IconButton
             className={classes.menuButton}
-            color="inherit"
             aria-label="Open drawer"
           >
             <Link to="/" className="header-link">
@@ -28,7 +27,6 @@ function Header(props) {
           <Typography
             className={classes.title}
             variant="h6"
-            color="inherit"
             noWrap
           >
             “Test Shop” Project

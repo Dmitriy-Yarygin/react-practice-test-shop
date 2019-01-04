@@ -4,6 +4,7 @@ import {
   cartProductsTotalCount
 } from '../selectors'
 import { products } from '../db/yacht.json'
+import { INIT_CURRENCY } from "../common/Constants";
 
 describe('Testing selectors', () => {
   const cart = [{ id: 1, count: 2, cost: 3 }, { id: 2, count: 3, cost: 4 }]
@@ -13,7 +14,7 @@ describe('Testing selectors', () => {
   })
 
   test('Cart total sum to be 18 ', () => {
-    expect(cartProductsTotalCount({ cart })).toBeCloseTo(18)
+    expect(cartProductsTotalCount({cart, currency: INIT_CURRENCY})).toBeCloseTo(18)
   })
 
   test('choosenProduct for id=11111 return null ', () => {

@@ -12,12 +12,16 @@ class Cart extends Component {
             <CartItem
               key={item.id}
               item={item}
+              currency={this.props.currency}
               delProductFromCart={this.props.delProductFromCart}
               editQantityInCart={this.props.editQantityInCart}
             />
           ))}
         </ul>
-        <h3 className="cart-totalSum">Total sum: {this.props.cartProductsTotalCount}</h3>
+        <h3 className="cart-totalSum">
+          Total sum: {this.props.cartProductsTotalCount}{" "}
+          {this.props.currency.designation}
+        </h3>
       </>
     );
   }
