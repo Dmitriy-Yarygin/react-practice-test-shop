@@ -2,6 +2,7 @@
   "name": "react-practice-test-shop",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/assets",
   "dependencies": {
     "@material-ui/core": "^3.7.0",
     "@material-ui/icons": "^3.0.1",

@@ -6,7 +6,7 @@ export const saveId = id => ({
 })
 
 export const getProductById = id => dispatch =>
-  fetch(`http://localhost:3005/products?id=${id}`)
+  fetch(`http://localhost:3005/api/products?id=${id}`)
     .then(response => response.json())
     .then(productItem => {
       dispatch(addProductItem(productItem[0]))
@@ -22,7 +22,7 @@ export const addProductItem = productItem => ({
 })
 
 export const fetchProducts = (start, limit) => dispatch =>
-  fetch(`http://localhost:3005/products?_start=${start}&_limit=${limit}`)
+  fetch(`http://localhost:3005/api/products?_start=${start}&_limit=${limit}`)
     .then(response => {
       dispatch(saveEnd(response.headers.get('X-Total-Count')))
       return response.json()
